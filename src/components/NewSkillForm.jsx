@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './NewSkillForm.css';
 
 const NewSkillForm = (props) => {
-  const [formData, setFormData] = useState({ name: '', level: '1' });
+  const [formData, setFormData] = useState({ name: '', level: '3' });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -15,7 +15,7 @@ const NewSkillForm = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     props.onSkillAdd(formData);
-    setFormData({ name: '', level: '1' });
+    setFormData({ name: '', level: '3' });
   };
 
   return (
